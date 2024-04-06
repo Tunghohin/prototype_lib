@@ -12,10 +12,10 @@ OBJCOPY := rust-objcopy --binary-architecture=riscv64
 elf: $(APPS)
 	@cargo build --release
 
-.DEFAULT_GOAL := binary
 binary: elf
 	$(foreach elf, $(ELFS), $(OBJCOPY) $(elf) --strip-all -O binary $(patsubst $(TARGET_DIR)/%, $(TARGET_DIR)/%.bin, $(elf));)
 
+.DEFAULT_GOAL := build
 build: binary
 
 clean:

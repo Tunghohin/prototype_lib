@@ -7,8 +7,9 @@ use std::prelude::*;
 #[no_mangle]
 fn main() -> i32 {
     let mut current_index = 0;
-    loop {
+    for _ in 0..10 {
         println!("{}", current_index);
-        current_index = (current_index + 1) % 10000;
+        current_index = (current_index + 1) % 3;
     }
+    0
 }

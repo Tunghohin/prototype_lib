@@ -3,12 +3,26 @@
 
 use prototype_lib as std;
 use std::prelude::*;
+use std::println;
 
 #[no_mangle]
 fn main() -> i32 {
-    println!("asfthhxxx {:x}", 0x23323323);
-    println!("asfthhxxx {:x}", 0x23323323);
-    println!("asfthhxxx {:x}", 0x23323323);
-    println!("asfthhxxx {:x}", 0x23323323);
-    0
+    let mut counter: usize = 0;
+    loop {
+        if counter == 200000000 {
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            println!("lap");
+            counter = 0;
+        } else {
+            counter += 1;
+        }
+    }
 }
